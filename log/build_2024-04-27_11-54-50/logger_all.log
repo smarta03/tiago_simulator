@@ -1,0 +1,539 @@
+[0.331s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--cmake-args', '-DBUILD_TESTING=OFF']
+[0.331s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DBUILD_TESTING=OFF'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7eab94d36980>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7eab94d35b70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7eab94d35b70>>)
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.657s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sergio/tiago_simulator2_ws'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.657s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.658s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.682s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.683s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.684s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['ignore', 'ignore_ament_install']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'ignore'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'ignore_ament_install'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['colcon_pkg']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'colcon_pkg'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['colcon_meta']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'colcon_meta'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['ros']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'ros'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['cmake', 'python']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'cmake'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'python'
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extensions ['python_setup_py']
+[0.685s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty) by extension 'python_setup_py'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extensions ['ignore', 'ignore_ament_install']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extension 'ignore'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extension 'ignore_ament_install'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extensions ['colcon_pkg']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extension 'colcon_pkg'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extensions ['colcon_meta']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extension 'colcon_meta'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extensions ['ros']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-bookstore-world) by extension 'ros'
+[0.689s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/aws-robomaker-bookstore-world' with type 'ros.ament_cmake' and name 'aws_robomaker_bookstore_world'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extensions ['ignore', 'ignore_ament_install']
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extension 'ignore'
+[0.689s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extension 'ignore_ament_install'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extensions ['colcon_pkg']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extension 'colcon_pkg'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extensions ['colcon_meta']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extension 'colcon_meta'
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extensions ['ros']
+[0.690s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-hospital-world) by extension 'ros'
+[0.690s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/aws-robomaker-hospital-world' with type 'ros.ament_cmake' and name 'aws_robomaker_hospital_world'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extensions ['ignore', 'ignore_ament_install']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extension 'ignore'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extension 'ignore_ament_install'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extensions ['colcon_pkg']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extension 'colcon_pkg'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extensions ['colcon_meta']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extension 'colcon_meta'
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extensions ['ros']
+[0.691s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-racetrack-world) by extension 'ros'
+[0.692s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/aws-robomaker-racetrack-world' with type 'ros.ament_cmake' and name 'aws_robomaker_racetrack_world'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extensions ['ignore', 'ignore_ament_install']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extension 'ignore'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extension 'ignore_ament_install'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extensions ['colcon_pkg']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extension 'colcon_pkg'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extensions ['colcon_meta']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extension 'colcon_meta'
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extensions ['ros']
+[0.692s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-house-world) by extension 'ros'
+[0.693s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/aws-robomaker-small-house-world' with type 'ros.ament_cmake' and name 'aws_robomaker_small_house_world'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extensions ['ignore', 'ignore_ament_install']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extension 'ignore'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extension 'ignore_ament_install'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extensions ['colcon_pkg']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extension 'colcon_pkg'
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extensions ['colcon_meta']
+[0.693s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extension 'colcon_meta'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extensions ['ros']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/aws-robomaker-small-warehouse-world) by extension 'ros'
+[0.694s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/aws-robomaker-small-warehouse-world' with type 'ros.ament_cmake' and name 'aws_robomaker_small_warehouse_world'
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extensions ['ignore', 'ignore_ament_install']
+[0.694s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extension 'ignore'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extension 'ignore_ament_install'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extensions ['colcon_pkg']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extension 'colcon_pkg'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extensions ['colcon_meta']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extension 'colcon_meta'
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extensions ['ros']
+[0.695s] Level 1:colcon.colcon_core.package_identification:_identify(src/ThirdParty/plasys_house_world) by extension 'ros'
+[0.696s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ThirdParty/plasys_house_world' with type 'ros.ament_cmake' and name 'plasys_house_world'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extension 'ignore'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extension 'ignore_ament_install'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extensions ['colcon_pkg']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extension 'colcon_pkg'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extensions ['colcon_meta']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extension 'colcon_meta'
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extensions ['ros']
+[0.696s] Level 1:colcon.colcon_core.package_identification:_identify(src/tiago_simulator) by extension 'ros'
+[0.697s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tiago_simulator' with type 'ros.ament_cmake' and name 'tiago_simulator'
+[0.697s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.697s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.697s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.697s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.697s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.741s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.741s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.748s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 12 installed packages in /home/sergio/tiago_simulator_ws/install
+[0.751s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 465 installed packages in /opt/ros/humble
+[0.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_target' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.857s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_bookstore_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.857s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_bookstore_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world', 'symlink_install': True, 'test_result_base': None}
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_target' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_hospital_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.858s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_hospital_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-hospital-world', 'symlink_install': True, 'test_result_base': None}
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_target' from command line to 'None'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.858s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_racetrack_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.859s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_racetrack_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-racetrack-world', 'symlink_install': True, 'test_result_base': None}
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_target' from command line to 'None'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.859s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_house_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.860s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_small_house_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-house-world', 'symlink_install': True, 'test_result_base': None}
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_target' from command line to 'None'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.860s] Level 5:colcon.colcon_core.verb:set package 'aws_robomaker_small_warehouse_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.860s] DEBUG:colcon.colcon_core.verb:Building package 'aws_robomaker_small_warehouse_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world', 'symlink_install': True, 'test_result_base': None}
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_target' from command line to 'None'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_clean_cache' from command line to 'False'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_clean_first' from command line to 'False'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'cmake_force_configure' from command line to 'False'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'ament_cmake_args' from command line to 'None'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'catkin_cmake_args' from command line to 'None'
+[0.861s] Level 5:colcon.colcon_core.verb:set package 'plasys_house_world' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.861s] DEBUG:colcon.colcon_core.verb:Building package 'plasys_house_world' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/plasys_house_world', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/plasys_house_world', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/ThirdParty/plasys_house_world', 'symlink_install': True, 'test_result_base': None}
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_args' from command line to '['-DBUILD_TESTING=OFF']'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_target' from command line to 'None'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.862s] Level 5:colcon.colcon_core.verb:set package 'tiago_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.862s] DEBUG:colcon.colcon_core.verb:Building package 'tiago_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sergio/tiago_simulator2_ws/build/tiago_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DBUILD_TESTING=OFF'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sergio/tiago_simulator2_ws/install/tiago_simulator', 'merge_install': False, 'path': '/home/sergio/tiago_simulator2_ws/src/tiago_simulator', 'symlink_install': True, 'test_result_base': None}
+[0.862s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.864s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.864s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world' with build type 'ament_cmake'
+[0.864s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world'
+[0.873s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.873s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.873s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.881s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-hospital-world' with build type 'ament_cmake'
+[0.881s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-hospital-world'
+[0.881s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.881s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.888s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-racetrack-world' with build type 'ament_cmake'
+[0.888s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-racetrack-world'
+[0.888s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.888s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.894s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-house-world' with build type 'ament_cmake'
+[0.895s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-house-world'
+[0.895s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.895s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.901s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world' with build type 'ament_cmake'
+[0.902s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world'
+[0.902s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.902s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.908s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/plasys_house_world' with build type 'ament_cmake'
+[0.908s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/ThirdParty/plasys_house_world'
+[0.908s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.909s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.914s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sergio/tiago_simulator2_ws/src/tiago_simulator' with build type 'ament_cmake'
+[0.915s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sergio/tiago_simulator2_ws/src/tiago_simulator'
+[0.915s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.915s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.926s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world
+[0.934s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-hospital-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world
+[0.937s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-racetrack-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world
+[0.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-house-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world
+[0.944s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/plasys_house_world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/plasys_house_world
+[0.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/tiago_simulator -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/tiago_simulator
+[5.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world
+[5.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world -- -j8 -l8
+[5.654s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/tiago_simulator -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/tiago_simulator
+[5.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/tiago_simulator -- -j8 -l8
+[5.672s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-house-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world
+[5.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world -- -j8 -l8
+[5.716s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/plasys_house_world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/plasys_house_world
+[5.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/plasys_house_world -- -j8 -l8
+[5.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/tiago_simulator -- -j8 -l8
+[5.740s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world -- -j8 -l8
+[5.745s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world -- -j8 -l8
+[5.755s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world
+[5.757s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world -- -j8 -l8
+[5.787s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/tiago_simulator
+[5.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world
+[5.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world
+[5.797s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-racetrack-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world
+[5.801s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world -- -j8 -l8
+[5.805s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/plasys_house_world -- -j8 -l8
+[5.845s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world -- -j8 -l8
+[5.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/plasys_house_world
+[5.876s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world -- -j8 -l8
+[5.893s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world
+[5.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world
+[6.272s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tiago_simulator)
+[6.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/tiago_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/tiago_simulator
+[6.293s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator' for CMake module files
+[6.294s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator' for CMake config files
+[6.295s] Level 1:colcon.colcon_core.shell:create_environment_hook('tiago_simulator', 'cmake_prefix_path')
+[6.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.ps1'
+[6.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.dsv'
+[6.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.sh'
+[6.306s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/bin'
+[6.307s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/lib/pkgconfig/tiago_simulator.pc'
+[6.307s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/lib/python3.10/site-packages'
+[6.308s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/bin'
+[6.309s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.ps1'
+[6.311s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.dsv'
+[6.313s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.sh'
+[6.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.bash'
+[6.321s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.zsh'
+[6.323s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/colcon-core/packages/tiago_simulator)
+[6.367s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tiago_simulator)
+[6.367s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator' for CMake module files
+[6.369s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator' for CMake config files
+[6.370s] Level 1:colcon.colcon_core.shell:create_environment_hook('tiago_simulator', 'cmake_prefix_path')
+[6.371s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.ps1'
+[6.372s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.dsv'
+[6.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/hook/cmake_prefix_path.sh'
+[6.374s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/bin'
+[6.374s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/lib/pkgconfig/tiago_simulator.pc'
+[6.374s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/lib/python3.10/site-packages'
+[6.374s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/bin'
+[6.375s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.ps1'
+[6.376s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.dsv'
+[6.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.sh'
+[6.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.bash'
+[6.380s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/tiago_simulator/package.zsh'
+[6.381s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/tiago_simulator/share/colcon-core/packages/tiago_simulator)
+[7.845s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_small_warehouse_world)
+[7.846s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world' for CMake module files
+[7.847s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_warehouse_world
+[7.849s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world' for CMake config files
+[7.854s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_small_warehouse_world', 'cmake_prefix_path')
+[7.855s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.ps1'
+[7.856s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.dsv'
+[7.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.sh'
+[7.858s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/bin'
+[7.858s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/lib/pkgconfig/aws_robomaker_small_warehouse_world.pc'
+[7.859s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/lib/python3.10/site-packages'
+[7.859s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/bin'
+[7.860s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.ps1'
+[7.861s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.dsv'
+[7.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.sh'
+[7.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.bash'
+[7.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.zsh'
+[7.864s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/colcon-core/packages/aws_robomaker_small_warehouse_world)
+[7.900s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_small_warehouse_world)
+[7.901s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world' for CMake module files
+[7.903s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world' for CMake config files
+[7.907s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_small_warehouse_world', 'cmake_prefix_path')
+[7.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.ps1'
+[7.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.dsv'
+[7.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/hook/cmake_prefix_path.sh'
+[7.909s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/bin'
+[7.909s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/lib/pkgconfig/aws_robomaker_small_warehouse_world.pc'
+[7.909s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/lib/python3.10/site-packages'
+[7.909s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/bin'
+[7.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.ps1'
+[7.911s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.dsv'
+[7.913s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.sh'
+[7.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.bash'
+[7.915s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/aws_robomaker_small_warehouse_world/package.zsh'
+[7.916s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_warehouse_world/share/colcon-core/packages/aws_robomaker_small_warehouse_world)
+[8.027s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_racetrack_world)
+[8.027s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world' for CMake module files
+[8.029s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_racetrack_world
+[8.030s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world' for CMake config files
+[8.036s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_racetrack_world', 'cmake_prefix_path')
+[8.037s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.ps1'
+[8.038s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.dsv'
+[8.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.sh'
+[8.039s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/bin'
+[8.040s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/lib/pkgconfig/aws_robomaker_racetrack_world.pc'
+[8.040s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/lib/python3.10/site-packages'
+[8.041s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/bin'
+[8.041s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.ps1'
+[8.043s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.dsv'
+[8.043s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.sh'
+[8.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.bash'
+[8.045s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.zsh'
+[8.046s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/colcon-core/packages/aws_robomaker_racetrack_world)
+[8.077s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_racetrack_world)
+[8.077s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world' for CMake module files
+[8.078s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world' for CMake config files
+[8.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_racetrack_world', 'cmake_prefix_path')
+[8.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.ps1'
+[8.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.dsv'
+[8.087s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/hook/cmake_prefix_path.sh'
+[8.088s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/bin'
+[8.088s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/lib/pkgconfig/aws_robomaker_racetrack_world.pc'
+[8.088s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/lib/python3.10/site-packages'
+[8.089s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/bin'
+[8.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.ps1'
+[8.091s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.dsv'
+[8.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.sh'
+[8.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.bash'
+[8.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/aws_robomaker_racetrack_world/package.zsh'
+[8.095s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_racetrack_world/share/colcon-core/packages/aws_robomaker_racetrack_world)
+[8.894s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_bookstore_world)
+[8.895s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world' for CMake module files
+[8.896s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_bookstore_world
+[8.896s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world' for CMake config files
+[8.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_bookstore_world', 'cmake_prefix_path')
+[8.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.ps1'
+[8.903s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.dsv'
+[8.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.sh'
+[8.904s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/bin'
+[8.904s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/lib/pkgconfig/aws_robomaker_bookstore_world.pc'
+[8.905s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/lib/python3.10/site-packages'
+[8.905s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/bin'
+[8.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.ps1'
+[8.907s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.dsv'
+[8.907s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.sh'
+[8.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.bash'
+[8.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.zsh'
+[8.909s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/colcon-core/packages/aws_robomaker_bookstore_world)
+[8.940s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_bookstore_world)
+[8.940s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world' for CMake module files
+[8.942s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world' for CMake config files
+[8.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_bookstore_world', 'cmake_prefix_path')
+[8.948s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.ps1'
+[8.948s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.dsv'
+[8.949s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/hook/cmake_prefix_path.sh'
+[8.950s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/bin'
+[8.950s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/lib/pkgconfig/aws_robomaker_bookstore_world.pc'
+[8.951s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/lib/python3.10/site-packages'
+[8.951s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/bin'
+[8.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.ps1'
+[8.952s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.dsv'
+[8.953s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.sh'
+[8.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.bash'
+[8.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/aws_robomaker_bookstore_world/package.zsh'
+[8.955s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_bookstore_world/share/colcon-core/packages/aws_robomaker_bookstore_world)
+[11.240s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_small_house_world)
+[11.241s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world' for CMake module files
+[11.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world
+[11.242s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world' for CMake config files
+[11.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_small_house_world', 'cmake_prefix_path')
+[11.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.ps1'
+[11.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.dsv'
+[11.255s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.sh'
+[11.255s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/bin'
+[11.255s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/lib/pkgconfig/aws_robomaker_small_house_world.pc'
+[11.256s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/lib/python3.10/site-packages'
+[11.256s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/bin'
+[11.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.ps1'
+[11.257s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.dsv'
+[11.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.sh'
+[11.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.bash'
+[11.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.zsh'
+[11.258s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/colcon-core/packages/aws_robomaker_small_house_world)
+[11.288s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_small_house_world)
+[11.288s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world' for CMake module files
+[11.289s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world' for CMake config files
+[11.299s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_small_house_world', 'cmake_prefix_path')
+[11.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.ps1'
+[11.300s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.dsv'
+[11.300s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/hook/cmake_prefix_path.sh'
+[11.301s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/bin'
+[11.301s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/lib/pkgconfig/aws_robomaker_small_house_world.pc'
+[11.301s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/lib/python3.10/site-packages'
+[11.302s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/bin'
+[11.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.ps1'
+[11.303s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.dsv'
+[11.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.sh'
+[11.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.bash'
+[11.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/aws_robomaker_small_house_world/package.zsh'
+[11.305s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_small_house_world/share/colcon-core/packages/aws_robomaker_small_house_world)
+[14.021s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plasys_house_world)
+[14.021s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world' for CMake module files
+[14.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/plasys_house_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/plasys_house_world
+[14.024s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world' for CMake config files
+[14.060s] Level 1:colcon.colcon_core.shell:create_environment_hook('plasys_house_world', 'cmake_prefix_path')
+[14.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.ps1'
+[14.062s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.dsv'
+[14.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.sh'
+[14.064s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/bin'
+[14.064s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/lib/pkgconfig/plasys_house_world.pc'
+[14.064s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/lib/python3.10/site-packages'
+[14.065s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/bin'
+[14.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.ps1'
+[14.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.dsv'
+[14.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.sh'
+[14.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.bash'
+[14.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.zsh'
+[14.069s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/colcon-core/packages/plasys_house_world)
+[14.106s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(plasys_house_world)
+[14.106s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world' for CMake module files
+[14.107s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world' for CMake config files
+[14.124s] Level 1:colcon.colcon_core.shell:create_environment_hook('plasys_house_world', 'cmake_prefix_path')
+[14.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.ps1'
+[14.125s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.dsv'
+[14.126s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/hook/cmake_prefix_path.sh'
+[14.126s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/bin'
+[14.126s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/lib/pkgconfig/plasys_house_world.pc'
+[14.127s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/lib/python3.10/site-packages'
+[14.127s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/bin'
+[14.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.ps1'
+[14.128s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.dsv'
+[14.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.sh'
+[14.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.bash'
+[14.130s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/plasys_house_world/package.zsh'
+[14.131s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/plasys_house_world/share/colcon-core/packages/plasys_house_world)
+[407.277s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake /home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-hospital-world -DBUILD_TESTING=OFF -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world
+[407.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world -- -j8 -l8
+[407.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --build /home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world -- -j8 -l8
+[407.385s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world
+[419.024s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_hospital_world)
+[419.026s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world' for CMake module files
+[419.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sergio/tiago_simulator_ws/install/waypoint_navigation:/home/sergio/tiago_simulator_ws/install/sound_recognition:/opt/ros/humble /usr/bin/cmake --install /home/sergio/tiago_simulator2_ws/build/aws_robomaker_hospital_world
+[419.028s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world' for CMake config files
+[419.061s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_hospital_world', 'cmake_prefix_path')
+[419.062s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.ps1'
+[419.063s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.dsv'
+[419.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.sh'
+[419.066s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/bin'
+[419.066s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/lib/pkgconfig/aws_robomaker_hospital_world.pc'
+[419.067s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/lib/python3.10/site-packages'
+[419.068s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/bin'
+[419.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.ps1'
+[419.070s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.dsv'
+[419.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.sh'
+[419.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.bash'
+[419.073s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.zsh'
+[419.074s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/colcon-core/packages/aws_robomaker_hospital_world)
+[419.115s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(aws_robomaker_hospital_world)
+[419.116s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world' for CMake module files
+[419.117s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world' for CMake config files
+[419.135s] Level 1:colcon.colcon_core.shell:create_environment_hook('aws_robomaker_hospital_world', 'cmake_prefix_path')
+[419.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.ps1'
+[419.136s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.dsv'
+[419.137s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/hook/cmake_prefix_path.sh'
+[419.137s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/bin'
+[419.138s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/lib/pkgconfig/aws_robomaker_hospital_world.pc'
+[419.138s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/lib/python3.10/site-packages'
+[419.139s] Level 1:colcon.colcon_core.environment:checking '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/bin'
+[419.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.ps1'
+[419.140s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.dsv'
+[419.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.sh'
+[419.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.bash'
+[419.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/aws_robomaker_hospital_world/package.zsh'
+[419.143s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sergio/tiago_simulator2_ws/install/aws_robomaker_hospital_world/share/colcon-core/packages/aws_robomaker_hospital_world)
+[419.143s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[419.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[419.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[419.144s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[419.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[419.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[419.156s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[419.181s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[419.182s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sergio/tiago_simulator2_ws/install/local_setup.ps1'
+[419.184s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sergio/tiago_simulator2_ws/install/_local_setup_util_ps1.py'
+[419.187s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sergio/tiago_simulator2_ws/install/setup.ps1'
+[419.191s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sergio/tiago_simulator2_ws/install/local_setup.sh'
+[419.193s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sergio/tiago_simulator2_ws/install/_local_setup_util_sh.py'
+[419.194s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sergio/tiago_simulator2_ws/install/setup.sh'
+[419.197s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sergio/tiago_simulator2_ws/install/local_setup.bash'
+[419.199s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sergio/tiago_simulator2_ws/install/setup.bash'
+[419.204s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sergio/tiago_simulator2_ws/install/local_setup.zsh'
+[419.205s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sergio/tiago_simulator2_ws/install/setup.zsh'
