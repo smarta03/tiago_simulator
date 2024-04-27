@@ -1,1 +1,0 @@
-/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-bookstore-world/launch/view_bookstore.launch.py

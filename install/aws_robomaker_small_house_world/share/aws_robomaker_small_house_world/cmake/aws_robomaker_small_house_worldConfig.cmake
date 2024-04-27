@@ -1,1 +1,0 @@
-/home/sergio/tiago_simulator2_ws/build/aws_robomaker_small_house_world/ament_cmake_core/aws_robomaker_small_house_worldConfig.cmake

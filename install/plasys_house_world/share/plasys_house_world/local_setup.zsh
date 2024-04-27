@@ -1,1 +1,0 @@
-/home/sergio/tiago_simulator2_ws/build/plasys_house_world/ament_cmake_environment_hooks/local_setup.zsh

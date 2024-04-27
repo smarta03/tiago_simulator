@@ -1,1 +1,0 @@
-/home/sergio/tiago_simulator2_ws/build/tiago_simulator/ament_cmake_environment_hooks/local_setup.bash

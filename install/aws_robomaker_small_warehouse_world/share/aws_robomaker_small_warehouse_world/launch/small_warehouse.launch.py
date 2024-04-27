@@ -1,1 +1,0 @@
-/home/sergio/tiago_simulator2_ws/src/ThirdParty/aws-robomaker-small-warehouse-world/launch/small_warehouse.launch.py
