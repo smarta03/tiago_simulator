@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-dataPath = '/home/sergio/reconocimineto_facial/Data'
+dataPath = 'src/face_recognition/Data'
 peopleList = os.listdir(dataPath)
 print('Lista de personas: ', peopleList)
 
@@ -42,5 +42,5 @@ print('Entrenando...')
 face_recognizer.train(facesData, np.array(labels))
 
 #Almacenando el modelo obtenido
-face_recognizer.write('/home/sergio/reconocimineto_facial/modeloEigenFace.xml')
+face_recognizer.write('src/face_recognition/modeloEigenFace.xml')
 print('Modelo almacenado...')

@@ -3,14 +3,14 @@ import cv2
 import os
 import numpy as np
 
-dataPath = '/home/sergio/reconocimineto_facial/Data'
+dataPath = 'src/face_recognition/Data'
 imagePaths = os.listdir(dataPath)
 print('imagePaths= ',imagePaths)
 
 face_recognizer = cv2.face.EigenFaceRecognizer_create()
 
 #Leer el modelo almacenado
-face_recognizer.read('/home/sergio/reconocimineto_facial/modeloEigenFace.xml')
+face_recognizer.read('src/face_recognition/modeloEigenFace.xml')
 
 #Leer los modelos de prueba
 
@@ -77,5 +77,3 @@ if np.count_nonzero(np.array(personDetected)==str(result[0])) > np.count_nonzero
     print('Confirmado que es',imagePaths[result[0]])
 else:
     print('No se reconoce quien es')
-
-print(esReconocido)
