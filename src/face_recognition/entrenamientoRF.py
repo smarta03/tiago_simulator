@@ -4,6 +4,8 @@ import numpy as np
 
 dataPath = 'src/face_recognition/Data'
 peopleList = os.listdir(dataPath)
+#Eliminar el fichero de .gitignore para que lo liste
+peopleList.remove('.gitignore')
 print('Lista de personas: ', peopleList)
 
 #Arrays para almacenar las etiquetas de cada persona

@@ -5,6 +5,8 @@ import numpy as np
 
 dataPath = 'src/face_recognition/Data'
 imagePaths = os.listdir(dataPath)
+#Eliminar el fichero de .gitignore para que lo liste
+imagePaths.remove('.gitignore')
 print('imagePaths= ',imagePaths)
 
 face_recognizer = cv2.face.EigenFaceRecognizer_create()
