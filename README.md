@@ -47,7 +47,7 @@ pip3 install -r requirements.txt
 ```shell
 colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
 ```
-En caso de error relacionado con simple_node eliminar la carpeta simple_node dentro de ThirdParty
+En caso de error relacionado con simple_node eliminar la carpeta simple_node dentro de ThirdParty.
 
 ## FICHERO .BASHRC
 Añadir al fichero ~/.bashrc
@@ -65,18 +65,18 @@ Sustituir tiago_simulator2_ws por el directorio de este proyecto si es necesario
 ```shell
 python3 ejecutar-proyecto.py
 ```
-Al ejecutarlo tendrás que responder a las siguientes cuestiones
+Al ejecutarlo tendrás que responder a las siguientes cuestiones:
 
-#### a) Deseas ejecutar el reconocimiento de rostros?.
+#### a) Deseas ejecutar el reconocimiento de rostros?
 Comienza el proceso de escaneo del rostro con la webcam para que el robot Tiago te reconozca al abrir la puerta
 
 #### b) Deseas ejecutar el entrenamiento?
 Debes haber ejecutado al menos una vez el reconocimiento de rostros. En caso de haber ejecutado el paso "a" es necesario realizar el entrenamiento.
 
-#### c) Deseas probar el reconocimiento facial?.
-Para ver en directo con la webcam el reconocimiento facial.
+#### c) Deseas probar el reconocimiento facial?
+Para ver en directo con la webcam el reconocimiento facial.  
 
-Se recomienda realizar el reconocimiento en varios entornos con distintas iluminaciones para que los datos sean más fiables.
+Se recomienda realizar el reconocimiento en varios entornos con distintas iluminaciones para que los datos sean más fiables.  
 
 Una vez finalizados los pasos la salida del terminal será el sonido que se está reconociendo.
 
@@ -92,7 +92,7 @@ ros2 launch tiago_simulator navigation.launch.py
 
 ### 3. Ejecutar la máquina de estados
 
-Ejecutar Yasmin con los pasos principales del programa
+Ejecutar Yasmin con los pasos principales del programa.
 
 ```shell
 ros2 run yasmin_demo nav_demo.py
@@ -100,12 +100,12 @@ ros2 run yasmin_demo nav_demo.py
 
 ## CAMBIOS EN EL CÓDIGO
 ### 1- Sonido a detectar
-Ahora mismo el robot inicia la secuencia de pasos para los estados cuando escucha hablar, se puede cambiar por el sonido que quieras simplemente coge el nombre de las salidas que da al ejectuar el fichero ejectuar-proyecto.py, ya que es la salida del paquete sound_recognition y sustituyelo en:
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py línea 65
+Ahora mismo el robot inicia la secuencia de pasos para los estados cuando escucha hablar, se puede cambiar por el sonido que quieras simplemente coge el nombre de las salidas que da al ejectuar el fichero ejectuar-proyecto.py, ya que es la salida del paquete sound_recognition y sustituyelo en:  
+*src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py línea 65*
 
 ### 2- Cámara que se está utilizando para el reconocimiento del rostro
-Para cambiar el input de la cámara que se utiliza en paquete publisher_cam se debe modificar el fichero:
-src/publisher_cam/publisher_cam/publisher_cam_node.py línea 13.
+Para cambiar el input de la cámara que se utiliza en paquete publisher_cam se debe modificar el fichero:  
+src/publisher_cam/publisher_cam/publisher_cam_node.py línea 13.  
 
 Existen las siguientes opciones por las que puedes cambiarlo:
 
@@ -145,27 +145,27 @@ gstreamer_pipeline = 'videotestsrc ! video/x-raw,framerate=30/1 ! videoconvert !
 self.cap = cv2.VideoCapture(gstreamer_pipeline, cv2.CAP_GSTREAMER)
 ```
 ### 3- Fase de aprendizaje para el reconocimiento del rostro
-El proceso para que el robot reconozca tu rostro se realiza desde el propio ordenador con la webcam que tiene instalada, en caso de querer cambiarlo se deben modificar los ficheros:
+El proceso para que el robot reconozca tu rostro se realiza desde el propio ordenador con la webcam que tiene instalada, en caso de querer cambiarlo se deben modificar los ficheros:  
 
-src/face_recognition/capturandoRostros.py línea 22
-src/face_recognition/reconocimientoFacial.py línea 20
+src/face_recognition/capturandoRostros.py línea 22  
+src/face_recognition/reconocimientoFacial.py línea 20  
 
 Las opciones que se pueden ingresar son las mismas que en el apartado anterior.
 
 ### 4- Waypoints
-Ahora mismo las coordenadas de los waypoints están puestas al azar ya que el mapa no corresponde al apartamento de León, si se quisieran cambiar están en:
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 211
+Ahora mismo las coordenadas de los waypoints están puestas al azar ya que el mapa no corresponde al apartamento de León, si se quisieran cambiar están en:  
+src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 211  
  
-No debe modificarse el nombre del waypoint ya que el nombre se establece para dar los permisos de la estancia que puede acceder la persona.
+No debe modificarse el nombre del waypoint ya que el nombre se establece para dar los permisos de la estancia que puede acceder la persona.  
 
-En caso de querer modificar los nombres de los waypoints tambien se deben modificar el el método decide_waypoint(person) acorde a los nuevos nombres y los permisos de la persona. Este método se encuentra en:
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204
+En caso de querer modificar los nombres de los waypoints tambien se deben modificar el el método decide_waypoint(person) acorde a los nuevos nombres y los permisos de la persona. Este método se encuentra en:  
+src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204  
 
 No renombrar NUNCA el waypoint "ENTRY"
 
 ### 5- Cambiar nombre de la persona que se reconoce.
-Se debe modificar el permiso de la persona que está ya establecido en el código cambiandole el nombre. Actualmente está establecido como "Sergio" pero tu deberás insertar el nombre que estableciste en el paso 1 al ejecutar el fichero ejecutar-proyecto.py e iniciar el proceso de reconocimiento del rostro.
+Se debe modificar el permiso de la persona que está ya establecido en el código cambiandole el nombre. Actualmente está establecido como "Sergio" pero tu deberás insertar el nombre que estableciste en el paso 1 al ejecutar el fichero ejecutar-proyecto.py e iniciar el proceso de reconocimiento del rostro.  
 
-Este nombre se modifica en el método decide_waypoint(person) que se encuentra en:
+Este nombre se modifica en el método decide_waypoint(person) que se encuentra en:  
 src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204
 
