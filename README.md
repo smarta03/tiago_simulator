@@ -105,7 +105,7 @@ Ahora mismo el robot inicia la secuencia de pasos para los estados cuando escuch
 
 ### 2- Cámara que se está utilizando para el reconocimiento del rostro
 Para cambiar el input de la cámara que se utiliza en paquete publisher_cam se debe modificar el fichero:  
-src/publisher_cam/publisher_cam/publisher_cam_node.py línea 13.  
+*src/publisher_cam/publisher_cam/publisher_cam_node.py línea 13*  
 
 Existen las siguientes opciones por las que puedes cambiarlo:
 
@@ -147,19 +147,19 @@ self.cap = cv2.VideoCapture(gstreamer_pipeline, cv2.CAP_GSTREAMER)
 ### 3- Fase de aprendizaje para el reconocimiento del rostro
 El proceso para que el robot reconozca tu rostro se realiza desde el propio ordenador con la webcam que tiene instalada, en caso de querer cambiarlo se deben modificar los ficheros:  
 
-src/face_recognition/capturandoRostros.py línea 22  
-src/face_recognition/reconocimientoFacial.py línea 20  
+*src/face_recognition/capturandoRostros.py línea 22*  
+*src/face_recognition/reconocimientoFacial.py línea 20*  
 
 Las opciones que se pueden ingresar son las mismas que en el apartado anterior.
 
 ### 4- Waypoints
 Ahora mismo las coordenadas de los waypoints están puestas al azar ya que el mapa no corresponde al apartamento de León, si se quisieran cambiar están en:  
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 211  
+*src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 211*  
  
 No debe modificarse el nombre del waypoint ya que el nombre se establece para dar los permisos de la estancia que puede acceder la persona.  
 
 En caso de querer modificar los nombres de los waypoints tambien se deben modificar el el método decide_waypoint(person) acorde a los nuevos nombres y los permisos de la persona. Este método se encuentra en:  
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204  
+*src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204*  
 
 No renombrar NUNCA el waypoint "ENTRY"
 
@@ -167,5 +167,6 @@ No renombrar NUNCA el waypoint "ENTRY"
 Se debe modificar el permiso de la persona que está ya establecido en el código cambiandole el nombre. Actualmente está establecido como "Sergio" pero tu deberás insertar el nombre que estableciste en el paso 1 al ejecutar el fichero ejecutar-proyecto.py e iniciar el proceso de reconocimiento del rostro.  
 
 Este nombre se modifica en el método decide_waypoint(person) que se encuentra en:  
-src/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204
+
+*/yasmin/yasmin_demo/yasmin_demo/nav-demo.py en la línea 204*
 
