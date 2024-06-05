@@ -67,11 +67,14 @@ python3 ejecutar-proyecto.py
 ```
 Al ejecutarlo tendrás que responder a las siguientes cuestiones
 
-a- Deseas ejecutar el reconocimiento de rostros?. Comienza el proceso de escaneo del rostro con la webcam para que el robot Tiago te reconozca al abrir la puerta
+#### a) Deseas ejecutar el reconocimiento de rostros?.
+Comienza el proceso de escaneo del rostro con la webcam para que el robot Tiago te reconozca al abrir la puerta
 
-b- Deseas ejecutar el entrenamiento? Debes haber ejecutado al menos una vez el reconocimiento de rostros. En caso de haber ejecutado el paso "a" es necesario realizar el entrenamiento.
+#### b) Deseas ejecutar el entrenamiento?
+Debes haber ejecutado al menos una vez el reconocimiento de rostros. En caso de haber ejecutado el paso "a" es necesario realizar el entrenamiento.
 
-c- Deseas probar el reconocimiento facial?. Para ver en directo con la webcam el reconocimiento facial.
+#### c) Deseas probar el reconocimiento facial?.
+Para ver en directo con la webcam el reconocimiento facial.
 
 Se recomienda realizar el reconocimiento en varios entornos con distintas iluminaciones para que los datos sean más fiables.
 
@@ -106,7 +109,7 @@ src/publisher_cam/publisher_cam/publisher_cam_node.py línea 13.
 
 Existen las siguientes opciones por las que puedes cambiarlo:
 
-#### a)Índice de Dispositivo (int):
+#### a) Índice de Dispositivo (int):
 Utilizado para capturar vídeo desde una webcam u otros dispositivos conectados al equipo. '0' para la cámara predeterminada, '1','2', etc para cámaras adicionales.
 ```shell
 self.cap = cv2.VideoCapture(0)  # Cámara predeterminada
@@ -123,19 +126,19 @@ En caso de no saber cual utilizar se puede especificar cv2.CAP_ANY para que Open
 cap = cv2.VideoCapture(0, cv2.CAP_ANY)
 ```
 
-#### b)Ruta de archivo(str)
+#### b) Ruta de archivo(str)
 Se especifica la ruta de un fichero de video en caso de que sea este el que se quiere tomar como datos a publicar en el nodo.
 ```shell
 self.cap = cv2.VideoCapture('ruta/de/video.mp4')  # Video almacenado
 ```
 
-#### c)URL(str)
+#### c) URL(str)
 En caso de que los datos a publicar se capturen desde una cámara IP. La URL debe estar en el formato que la cámara proporcione.
 ```shell
 self.cap = cv2.VideoCapture('http://192.168.0.101:8080/video') # Cámara IP
 ```
 
-#### d)Pipeline de GStreamer(str)
+#### d) Pipeline de GStreamer(str)
 En caso de utilizar pipeline de video personalizados de GStreamer.
 ```shell
 gstreamer_pipeline = 'videotestsrc ! video/x-raw,framerate=30/1 ! videoconvert ! appsink'
