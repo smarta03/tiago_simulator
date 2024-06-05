@@ -1,11 +1,11 @@
 # Proyecto Tiago 
-Versión ROS 2 HUMBLE
-Ubuntu 22.04.4 LTS
-Idioma del sistema: ENG
+Versión ROS 2 HUMBLE  
+Ubuntu 22.04.4 LTS  
+Idioma del sistema: ENG  
 
 ## INSTALACIÓN
 
-Instalación de las dependencias de los diferentes paquetes y repositorios de terceros
+Instalación de las dependencias de los diferentes paquetes y repositorios de terceros.
 
 ### 1- Paquete tiago_simulator
 ```shell
