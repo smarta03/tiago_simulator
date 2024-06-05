@@ -18,7 +18,7 @@ if recognize == "y":
         print('La persona ya existe')
 
     #Especificar de donde tomara los datos de la persona
-    #Desde la camara en directo
+    #Desde la camara en directo, cambiar parámetros para variar la cámara que se quiere utilizar
     cap = cv2.VideoCapture(0,cv2.CAP_ANY)
     #Desde un video
     #cap = cv2.VideoCapture('/home/sergio/reconocimineto_facial/Sergio-webcam2.mp4')

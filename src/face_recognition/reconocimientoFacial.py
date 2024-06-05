@@ -16,7 +16,7 @@ face_recognizer.read('src/face_recognition/modeloEigenFace.xml')
 
 #Leer los modelos de prueba
 
-#Desde webcam
+#Desde webcam, cambiar parámetros para variar la cámara que se quiere utilizar
 cap = cv2.VideoCapture(0,cv2.CAP_ANY)
 timeout = time.time() + 30
 

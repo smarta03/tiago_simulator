@@ -9,6 +9,7 @@ class ImagePublisher(Node):
     def __init__(self):
         super().__init__("image_publisher")
         self.bridge = CvBridge()
+        #Cambio de cámara que publicará los datos en el nodo
         self.cap = cv2.VideoCapture(0)
         self.pub = self.create_publisher(Image, "/image", 10)
         self.rgb8pub = self.create_publisher(Image, "/image/rgb", 10)

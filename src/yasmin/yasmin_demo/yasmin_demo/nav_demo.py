@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 
 #COSAS PENDIENTES: 
-    #QUITAR EL RCLPY.SHUTDOWN E INIT DEL RECONOCIMINETO FACIAL SINO DA ERROR AL LANZAR DE NUEVO EL GOAL DE POSICION
-    #CON EL JOIN COMENTADO TAMBIEN DA ERROR, VER COMO DESTRUIR EL NODO, IGUAL PONER UN TRY DONDE SE CREA
-    #Cambiar tipo de sonido que activa todo en funcion al timbre del aula
-    #Añadir salida de pantalla con los estados que se ejecutan
 
 import rclpy
 import time
@@ -65,6 +61,7 @@ class Sound_Recognition_State_1(State):
         global states_list
         listener_sound_recognition_node = ListenerSoundRecognitionNode()
         rclpy.spin_once(listener_sound_recognition_node)
+        #Cambiar "speech" por el sonido que se desea reconocer para que cominence la secuencia
         if sound_recognition_msg != "speech":
             listener_sound_recognition_node.destroy_node()
             states_list.append("noTimbre")
@@ -203,6 +200,7 @@ def decide_waypoint(person) -> str:
     if person == "":
         return "entry"
     else:
+        #Cambiar nombres acorde a los waypoints teniendo en cuenta los permisos de las personas
         if person == "Sergio" and states_list[-1] != "EXIT":
             return "cocina"
         else:
@@ -210,6 +208,7 @@ def decide_waypoint(person) -> str:
 
     
 def create_waypoints(blackboard: Blackboard) -> str:
+    #Cambiar cooredanas de waypoints
     waypoints = {
         "entry": [3.84,-5.86,-0.00143, 0.67],
         "cocina": [1.84,-5.86,-0.00143, 0.67],
@@ -340,9 +339,6 @@ def detectPerson():
         #Eliminar fichero .gitignore de los paths
         imagePaths.remove('.gitignore')
         print('imagePaths= ',imagePaths)
-
-        #Puestos manualmente, se listan al reves
-        #imagePaths = ["Sergio"]
 
         face_recognizer = cv2.face.EigenFaceRecognizer_create()
 
