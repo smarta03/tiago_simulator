@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<!-- Copyright (C) 2023  Miguel Ángel González Santamarta
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>. -->
+
+<robot name="base" xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+
+  <xacro:include filename="$(find rb1_description)/urdf/bases/base.gazebo.xacro" />
+
+
+  <xacro:macro name="base" params="publish_bf hq">
+
+  <!-- Robot mechanical and motor parameters -->
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="wheel_width" value="0.175" />
+
+  <!-- BASE FOOTPRINT -->
+  <xacro:if value="${publish_bf}">
+    <link name="base_footprint">
+      <visual>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <box size="0.001 0.001 0.001" />
+          </geometry>
+      </visual>
+    </link>
+
+    <joint name="base_footprint_joint" type="fixed">
+       <origin xyz="0 0 ${wheel_radius - wheel_offset_z}" rpy="0 0 0" />
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+    </joint>    
+  </xacro:if>
+
+  <!-- BASE_LINK -->
+  <link name="base_link">
+    <inertial>
+      <mass value="25.0" />
+      <origin xyz="0 0 0" />
+      <inertia  ixx="3.0" ixy="0.0"  ixz="0.0"  iyy="3.0"  iyz="0.0"  izz="3.0" />
+    </inertial>
+    <visual>
+       <origin xyz="0 0 0" rpy="0 0 0" />
+       <xacro:if value="${hq}">
+       <geometry>
+         <mesh filename="package://rb1_description/meshes/bases/base.dae"/>
+       </geometry>
+       </xacro:if>
+       <xacro:unless value="${hq}">
+       <geometry>
+       <mesh filename="package://rb1_description/meshes/bases/base.stl"/>
+       </geometry>
+       </xacro:unless>
+       <material name="darkgrey">
+         <color rgba="0.1 0.1 0.1 1"/>
+       </material>
+    </visual>  
+    <collision>
+       <origin xyz="0 0 0" rpy="0 0 0 " />
+       <geometry>
+         <mesh filename="package://rb1_description/meshes/bases/base.dae"/>
+       </geometry>
+    </collision>
+  </link>
+
+  </xacro:macro>
+</robot>
+
