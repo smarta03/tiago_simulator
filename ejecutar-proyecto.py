@@ -4,9 +4,9 @@ def main():
     # Lista de comandos a ejecutar
     comandos = [
         'python3 src/face_recognition/capturandoRostros.py',
-        'ros2 launch sound_recognition sound_recognition.launch.py',
-        'ros2 launch text_to_speech text_to_speech.launch.py',
-        'ros2 run publisher_cam publisher_cam_node',
+        #'ros2 launch sound_recognition sound_recognition.launch.py',
+        #'ros2 launch text_to_speech text_to_speech.launch.py',
+        #'ros2 run publisher_cam publisher_cam_node',
         #'python3 ~/Documents/yasmin-prueba3.py'
 
     ]

@@ -27,6 +27,8 @@ from yasmin_viewer import YasminViewerPub
 
 from text_to_speech_msgs.action import TTS
 
+from io import BytesIO
+
 sound_recognition_msg = ""
 states_list = []
 person_detect= ""
@@ -253,7 +255,7 @@ class ImageSubscriber(Node):
         super().__init__('image_subscriber')
         self.subscription = self.create_subscription(
             Image,
-            'image/rgb',
+            '/head_front_camera/rgb/image_raw',
             self.listener_callback,
             10)
         self.subscription 
@@ -289,12 +291,6 @@ def detectPerson():
     ros2_thread = threading.Thread(target=ros2_spin, args=(image_subscriber,stop_event))
     ros2_thread.start()
 
-    output_file = 'src/face_recognition/video.mp4'
-
-    # Eliminar el archivo de salida si ya existe
-    if os.path.exists(output_file):
-        os.remove(output_file)
-        print(f"Archivo existente '{output_file}' eliminado.")
 
     # Configuración del video
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec para MP4
@@ -302,7 +298,8 @@ def detectPerson():
     frame_width = 650  # Ancho del frame, igual que usado para el reconocimiento facial
     frame_height = 400  # Altura del frame, igual que usado para el reconocimineto facial
 
-    out = cv2.VideoWriter(output_file, fourcc, fps, (frame_width, frame_height))
+    #out = cv2.VideoWriter(output_file, fourcc, fps, (frame_width, frame_height))
+    out = cv2.VideoWriter('temp.mp4', fourcc, fps, (frame_width, frame_height))
 
     start_time = time.time()
     recording_duration = 5  # Duración en segundos
@@ -330,7 +327,14 @@ def detectPerson():
         ros2_thread.join()
         # Liberar el VideoWriter
         out.release()
+
+        video_mem = BytesIO()
         
+        with open('temp.avi', 'rb') as f:
+            video_mem.write(f.read())
+
+        
+        video_mem.seek(0)
 
         #COMIENZO RECONOCIMIENTO FACIAL
         #Listado de las carpetas para saber el nombre de la persona
@@ -346,7 +350,7 @@ def detectPerson():
         face_recognizer.read('src/face_recognition/modeloEigenFace.xml')
 
         #Leer los modelos
-        cap = cv2.VideoCapture(output_file)
+        cap = cv2.VideoCapture(video_mem)
 
         #Array que alamacena los resultados obtenidos de todos los frames
         personDetected = []

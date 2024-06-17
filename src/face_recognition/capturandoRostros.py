@@ -2,42 +2,55 @@ import cv2
 import os
 import imutils
 import subprocess
+from cv_bridge import CvBridge
+from sensor_msgs.msg import Image
+from rclpy.node import Node
+import rclpy
 
-#Crear persona y carpeta personal
-recognize = input('Deseas ejecutar el reconocimiento de rostros? \n Escribe y(si) o n(no)\n')
+class ImageSubscriber(Node):
+    def __init__(self):
+        super().__init__('image_subscriber')
+        self.subscription = self.create_subscription(
+            Image,
+            '/head_front_camera/rgb/image_raw',
+            self.listener_callback,
+            10)
+        self.subscription 
+        self.bridge = CvBridge()
+        self.current_image = None
+        #Abrir el video y sacar los datos de los fotogramas
+        self.faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
+            
+    def listener_callback(self, msg):
+        #self.get_logger().info('Recibí una imagen')
+        # Convertir de ROS Image message a OpenCV image
+        self.current_image = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
 
-if recognize == "y":
-    personaName = input("Introduce tu nombre: ")
-    dataPath = 'src/face_recognition/Data'
-    personaPath = dataPath + '/' + personaName
-    #print(personaPath)
-    if not os.path.exists(personaPath):
-        print('Carpeta creada: ', personaPath)
-        os.makedirs(personaPath)
-    else:
-        print('La persona ya existe')
+        #Crear persona y carpeta personal
+        personaName = "Sergio"
+        dataPath = 'src/face_recognition/Data'
+        personaPath = dataPath + '/' + personaName
+        #print(personaPath)
+        if not os.path.exists(personaPath):
+            print('Carpeta creada: ', personaPath)
+            os.makedirs(personaPath)
+        else:
+            print('La persona ya existe')
 
-    #Especificar de donde tomara los datos de la persona
-    #Desde la camara en directo, cambiar parámetros para variar la cámara que se quiere utilizar
-    cap = cv2.VideoCapture(0,cv2.CAP_ANY)
-    #Desde un video
-    #cap = cv2.VideoCapture('/home/sergio/reconocimineto_facial/Sergio-webcam2.mp4')
+        #Especificar de donde tomara los datos de la persona
+        #Desde la camara en directo, cambiar parámetros para variar la cámara que se quiere utilizar
+        #cap = cv2.VideoCapture(0,cv2.CAP_ANY)
 
-    print("Cuantas imagenes deseas escanear? \n Recomendado 200")
-    num_photos = int(input())
+        
 
-    #Abrir el video y sacar los datos de los fotogramas
-    faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
-    count = 0
-
-    while True:
-        ret, frame = cap.read()
-        if ret == False: break
+        #Desde un video
+        #cap = cv2.VideoCapture('/home/sergio/reconocimineto_facial/Sergio-webcam2.mp4')
+        frame = self.current_image
         frame = imutils.resize(frame, width=640)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         auxFrame = frame.copy()
 
-        faces = faceClassif.detectMultiScale(gray,1.3,5)
+        faces = self.faceClassif.detectMultiScale(gray,1.3,5)
 
         for(x,y,w,h) in faces:
             cv2.rectangle(frame, (x,y),(x+w,+h),(0,255,0),2)
@@ -47,23 +60,27 @@ if recognize == "y":
             count = count +1
         cv2.imshow('frame',frame)
 
-        k = cv2.waitKey(1)
-        if k == 27 or count >= num_photos:
-            break
+        print('Imagenes guardadas...')
+        cv2.destroyAllWindows()
 
-    print('Imagenes guardadas...')
-    cap.release()
-    cv2.destroyAllWindows()
-
-
-training = input('Deseas ejecutar el entrenamiento? Debes haber ejecutado al menos una vez el reconocimiento de resotros\n Escribe y(si) o n(no)\n')
-if training == "y":
-     proceso = subprocess.Popen('python3 src/face_recognition/entrenamientoRF.py', shell=True)
-     proceso.wait()
-
-scan = input('Deseas probar el reconocimiento facial? \n Escribe y(si) o n(no)\n')
-if scan == "y":
-     proceso = subprocess.Popen('python3 src/face_recognition/reconocimientoFacial.py', shell=True)
-     proceso.wait()
+        def get_current_image(self):
+            #Para que el codigo solo lo ejecute un hilo
+            with self.lock:
+                return self.current_image
 
 print("FIN")
+
+def main():
+    rclpy.init()
+    image_sus = ImageSubscriber()
+    count = 0
+
+    while count < 200:
+        rclpy.spin_once(image_sus)
+        count = count + 1
+
+    image_sus.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
