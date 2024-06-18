@@ -102,7 +102,7 @@ def generate_launch_description():
                           "initial_pose_y": initial_pose_y,
                           "initial_pose_z": initial_pose_z,
                           "initial_pose_yaw": initial_pose_yaw,
-                          "cmd_vel_topic": "/mobile_base_controller/cmd_vel"}.items())
+                          "cmd_vel_topic": "/cmd_vel"}.items())
 
     ld = LaunchDescription()
 

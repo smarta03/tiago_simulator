@@ -205,6 +205,10 @@ def decide_waypoint(person) -> str:
         #Cambiar nombres acorde a los waypoints teniendo en cuenta los permisos de las personas
         if person == "Sergio" and states_list[-1] != "EXIT":
             return "cocina"
+        if person == "Claudia" and states_list[-1] != "EXIT":
+            return "habitacion"
+        if person == "no_reconocido" and states_list[-1] != "EXIT":
+            return "bano"
         else:
             return "entry"
 
@@ -212,8 +216,10 @@ def decide_waypoint(person) -> str:
 def create_waypoints(blackboard: Blackboard) -> str:
     #Cambiar cooredanas de waypoints
     waypoints = {
-        "entry": [3.84,-5.86,-0.00143, 0.67],
-        "cocina": [1.84,-5.86,-0.00143, 0.67],
+        "entry": [1.336, 6.544, 0.000, 1.541],
+        "cocina": [4.977, 6.942, 0.000, 1.662],
+        "habitacion": [6.942, 5.066, 0.000, -0.790],
+        "bano": [4.817, 1.941, 0.000, 0.738],
         "exit":[0,0,0,0]
         }
 

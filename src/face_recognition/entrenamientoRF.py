@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-dataPath = 'src/face_recognition/Data'
+dataPath = 'Data'
 peopleList = os.listdir(dataPath)
 #Eliminar el fichero de .gitignore para que lo liste
 peopleList.remove('.gitignore')
@@ -44,5 +44,5 @@ print('Entrenando...')
 face_recognizer.train(facesData, np.array(labels))
 
 #Almacenando el modelo obtenido
-face_recognizer.write('src/face_recognition/modeloEigenFace.xml')
+face_recognizer.write('modeloEigenFace.xml')
 print('Modelo almacenado...')

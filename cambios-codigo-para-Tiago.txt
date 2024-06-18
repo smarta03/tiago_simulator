@@ -8,11 +8,6 @@ CAMBIOS EN EL CÓDIGO
 
     odom_topic: /mobile_base_controller/odom
 
-2. Cambiar suscripción al nodo de navegación en YASMIN:
-
-    En class Nav2State:
-    - El action type sigue siendo NavigateToPose
-    - Cual es el nombre del nodo ¿waypoint_follower?
 
 3. Lanzar:
 
