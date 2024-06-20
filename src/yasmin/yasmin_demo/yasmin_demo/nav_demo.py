@@ -27,6 +27,8 @@ from yasmin_viewer import YasminViewerPub
 
 from text_to_speech_msgs.action import TTS
 
+from tf_transformations import quaternion_from_euler
+
 from io import BytesIO
 
 sound_recognition_msg = ""
@@ -64,7 +66,9 @@ class Sound_Recognition_State_1(State):
         listener_sound_recognition_node = ListenerSoundRecognitionNode()
         rclpy.spin_once(listener_sound_recognition_node)
         #Cambiar "speech" por el sonido que se desea reconocer para que cominence la secuencia
-        if sound_recognition_msg != "speech":
+        sonidos = ["siren","alarm"]
+
+        if sound_recognition_msg not in sonidos:
             listener_sound_recognition_node.destroy_node()
             states_list.append("noTimbre")
             return "noTimbre"
@@ -192,6 +196,7 @@ class Nav2State(ActionState):
     def create_goal_handler(self, blackboard: Blackboard) -> NavigateToPose.Goal:
         print("-----------Ejecutando Nav2State-----------")
         goal = NavigateToPose.Goal()
+
         create_waypoints(blackboard)
         goal.pose.pose = blackboard.pose
         goal.pose.header.frame_id = "map"
@@ -207,8 +212,10 @@ def decide_waypoint(person) -> str:
             return "cocina"
         if person == "Claudia" and states_list[-1] != "EXIT":
             return "habitacion"
-        if person == "no_reconocido" and states_list[-1] != "EXIT":
+        if person == "Alejandro" and states_list[-1] != "EXIT":
             return "bano"
+        #if person == "no_reconocido" and states_list[-1] != "EXIT":
+            #return "bano"
         else:
             return "entry"
 
@@ -231,8 +238,9 @@ def create_waypoints(blackboard: Blackboard) -> str:
     pose.position.x = wp[0]
     pose.position.y = wp[1]
 
-    pose.orientation.z = wp[2]
-    pose.orientation.w = wp[3]
+    (x,y,z,w)=quaternion_from_euler(0,0,wp[3])
+    pose.orientation.z = z
+    pose.orientation.w = w
 
     blackboard.pose = pose
     blackboard.text = f"I have reached waypoint"
@@ -297,31 +305,55 @@ def detectPerson():
     ros2_thread = threading.Thread(target=ros2_spin, args=(image_subscriber,stop_event))
     ros2_thread.start()
 
-
-    # Configuración del video
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec para MP4
-    fps = 10  # Cuadros por segundo
-    frame_width = 650  # Ancho del frame, igual que usado para el reconocimiento facial
-    frame_height = 400  # Altura del frame, igual que usado para el reconocimineto facial
-
     #out = cv2.VideoWriter(output_file, fourcc, fps, (frame_width, frame_height))
-    out = cv2.VideoWriter('temp.mp4', fourcc, fps, (frame_width, frame_height))
 
     start_time = time.time()
     recording_duration = 5  # Duración en segundos
+
+    #COMIENZO RECONOCIMIENTO FACIAL
+    #Listado de las carpetas para saber el nombre de la persona
+    dataPath = 'src/face_recognition/Data'
+    imagePaths = os.listdir(dataPath)
+    #Eliminar fichero .gitignore de los paths
+    imagePaths.remove('.gitignore')
+    print('imagePaths= ',imagePaths)
+
+    face_recognizer = cv2.face.EigenFaceRecognizer_create()
+
+    #Leer el modelo almacenado
+    face_recognizer.read('src/face_recognition/modeloEigenFace.xml')
+
+    #Array que alamacena los resultados obtenidos de todos los frames
+    personDetected = []
+    personDetected.append('Desconocido')
+    result = None
+
+    faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
 
     try:
         while rclpy.ok() and (time.time() - start_time < recording_duration):
             current_image = image_subscriber.get_current_image()
             if current_image is not None:
+                print('imagen recibida')
                 # Redimensionar la imagen si es necesario
-                frame = cv2.resize(current_image, (frame_width, frame_height))
-                # Escribir el frame en el archivo de video
-                out.write(frame)
-                # Mostrar la imagen
-                cv2.imshow('Imagen de la webcam', frame)
-                if cv2.waitKey(1) == ord('q'):
-                    break
+                #frame = cv2.resize(current_image, (frame_width, frame_height))
+
+                gray = cv2.cvtColor(current_image, cv2.COLOR_BGR2GRAY)
+                auxFrame = gray.copy()
+
+                faces = faceClassif.detectMultiScale(gray,1.3,5)
+
+                for (x,y,w,h) in faces:
+                    rostro = auxFrame[y:y+h,x:x+w]
+                    rostro = cv2.resize(rostro,(150,150),interpolation= cv2.INTER_CUBIC)
+                    result = face_recognizer.predict(rostro)
+                    
+                    #EigenFaces
+                    if result[1] < 4500:
+                        personDetected.append(result[0])
+                    else:
+                        personDetected.append('Desconocido')
+
     except KeyboardInterrupt:
         pass
     finally:
@@ -331,76 +363,11 @@ def detectPerson():
         cv2.destroyAllWindows()
         print("Antes del join")
         ros2_thread.join()
-        # Liberar el VideoWriter
-        out.release()
 
-        video_mem = BytesIO()
-        
-        with open('temp.avi', 'rb') as f:
-            video_mem.write(f.read())
-
-        
-        video_mem.seek(0)
-
-        #COMIENZO RECONOCIMIENTO FACIAL
-        #Listado de las carpetas para saber el nombre de la persona
-        dataPath = 'src/face_recognition/Data'
-        imagePaths = os.listdir(dataPath)
-        #Eliminar fichero .gitignore de los paths
-        imagePaths.remove('.gitignore')
-        print('imagePaths= ',imagePaths)
-
-        face_recognizer = cv2.face.EigenFaceRecognizer_create()
-
-        #Leer el modelo almacenado
-        face_recognizer.read('src/face_recognition/modeloEigenFace.xml')
-
-        #Leer los modelos
-        cap = cv2.VideoCapture(video_mem)
-
-        #Array que alamacena los resultados obtenidos de todos los frames
-        personDetected = []
-        personDetected.append('Desconocido')
-        result = None
-
-        faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')
-
-        while True:
-            ret,frame = cap.read()
-            if ret == False: break
-            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            auxFrame = gray.copy()
-
-            faces = faceClassif.detectMultiScale(gray,1.3,5)
-
-            for (x,y,w,h) in faces:
-                rostro = auxFrame[y:y+h,x:x+w]
-                rostro = cv2.resize(rostro,(150,150),interpolation= cv2.INTER_CUBIC)
-                result = face_recognizer.predict(rostro)
-
-                cv2.putText(frame,'{}'.format(result),(x,y-5),1,1.3,(255,255,0),1,cv2.LINE_AA)
-                
-                #EigenFaces
-                if result[1] < 3500:
-                    cv2.putText(frame,'{}'.format(imagePaths[result[0]]),(x,y-25),2,1.1,(0,255,0),1,cv2.LINE_AA)
-                    cv2.rectangle(frame, (x,y),(x+w,y+h),(0,255,0),2)
-                    personDetected.append(result[0])
-                else:
-                    cv2.putText(frame,'Desconocido',(x,y-20),2,0.8,(0,0,255),1,cv2.LINE_AA)
-                    cv2.rectangle(frame, (x,y),(x+w,y+h),(0,0,255),2)
-                    personDetected.append('Desconocido')
-
-            cv2.imshow('frame',frame)
-            k=cv2.waitKey(1)
-            if k == 27:
-                break
-
-        cap.release()
-        cv2.destroyAllWindows()
 
         #Decidir si es la persona o no
         try:
-            if np.count_nonzero(np.array(personDetected)==str(result[0])) > 25:
+            if np.count_nonzero(np.array(personDetected)==str(result[0])) > 5:
                 print('Confirmado que es',imagePaths[result[0]])
                 return imagePaths[result[0]]
             else:
@@ -472,7 +439,9 @@ def main():
         "send_goal",
         Nav2State(),
         transitions={
-            SUCCEED: "select_state"
+            SUCCEED: "select_state",
+            CANCEL: "send_goal",
+            ABORT: "send_goal"
         }
     )
 
